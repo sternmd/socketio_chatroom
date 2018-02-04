@@ -21,4 +21,9 @@ io.on('connection', function(socket) {
     io.sockets.emit('chat', data);
     console.log(data);
   })
+
+  // Listen for typing
+  socket.on('typing', function(data){
+    socket.broadcast.emit('typing', data);
+  })
 })
