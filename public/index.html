@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>WebSockets 101</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js">
-
     </script>
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <div id="chat">
-      <div id="chat-window">
-        <div id="output"></div>
-        <div id="feedback"></div>
+
+    <section class="section">
+
+    <div class="container">
+
+      <div id="chat">
+        <div class="header">
+          <h1>My Chatroom</h1>
+          <h3>Users: <span id="users"></span></h3>
+        </div>
+        <div id="chat-window">
+          <div id="output"></div>
+          <div id="feedback"></div>
+        </div>
+        <input id="handle" type="text" placeholder="username"/>
+        <input id="message" type="text" placeholder="message"/>
+        <button id ="send">Send</button>
       </div>
-      <input id="handle" type="text" placeholder="Handle"/>
-      <input id="message" type="text" placeholder="Message"/>
-      <button id ="send">Send</button>
     </div>
+  </section>
+
     <script src="/chat.js"></script>
   </body>
 </html>
