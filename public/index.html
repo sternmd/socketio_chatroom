@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>WebSockets 101</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js">
-    </script>
-    <link rel="stylesheet" href="/styles.css">
-  </head>
-  <body>
 
-    <section class="section">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>WebSockets 101</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js">
+  </script>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
 
+<body>
+
+  <section class="section">
     <div class="container">
-
       <div id="chat">
         <div class="header">
           <h1>My Chatroom</h1>
@@ -23,13 +23,14 @@
           <div id="output"></div>
           <div id="feedback"></div>
         </div>
-        <input id="handle" type="text" placeholder="username"/>
-        <input id="message" type="text" placeholder="message"/>
-        <button id ="send">Send</button>
+        <input id="handle" type="text" placeholder="username" />
+        <input id="message" type="text" placeholder="message" />
+        <button id="send">Send</button>
       </div>
     </div>
   </section>
 
-    <script src="/chat.js"></script>
-  </body>
+  <script src="/chat.js"></script>
+</body>
+
 </html>

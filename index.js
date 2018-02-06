@@ -1,14 +1,25 @@
 const express = require('express');
 const socket = require('socket.io');
 const app = express();
+const sassMiddleware = require('node-sass-middleware');
+const path = require('path');
 
 // Server
 let server = app.listen(3000, () => {
   console.log('listening to request on port 3000');
 })
 
-// Static files
-app.use(express.static('public'));
+// Sass middleware
+app.use(
+  sassMiddleware({
+    src: __dirname + '/scss',
+    dest: __dirname + '/public/css',
+    debug: true,
+  })
+);
+
+// The static middleware must come after the sass middleware
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Socket connection / setup
 let io = socket(server);
